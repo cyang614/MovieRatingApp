@@ -1,7 +1,9 @@
-{/*https://www.youtube.com/watch?v=miUsa5SOXGk 24:42*/}
+{/*https://www.youtube.com/watch?v=miUsa5SOXGk 1:09:26*/}
 import {BrowserRouter as Router , Routes,Route} from "react-router-dom";
 import {Navbar} from "./components/navbar"
 import './App.css'
+import { Auth } from "./pages/auth";
+import { Home } from "./pages/home";
 
 function App() {
   return (
@@ -9,9 +11,9 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<h1>Home</h1>}></Route>
-        <Route path="/auth" element={<h1>Auth</h1>}></Route>
-        <Route path="/rated" element={<h1>Rated Page</h1>}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/rated" element={<h1>Rated Page</h1>} />
       </Routes>
     </Router>  
   </div>
