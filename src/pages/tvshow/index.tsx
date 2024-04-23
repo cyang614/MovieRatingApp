@@ -106,7 +106,7 @@ export const TvShow = () => {
                                     <List.Header>
                                         Season: 
                                     </List.Header>
-                                    <List.Description>
+                                    <List.Description style={{height:"200px" , overflowY:"scroll"}}>
                                         <Accordion defaultActiveIndex={0} panels={seasonsPanels} styled />
                                     </List.Description>
                                 </List.Item>

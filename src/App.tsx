@@ -1,4 +1,4 @@
-{/*https://www.youtube.com/watch?v=miUsa5SOXGk 1:36:05*/}
+{/*https://www.youtube.com/watch?v=miUsa5SOXGk 1:55:56*/}
 import {BrowserRouter as Router , Routes,Route} from "react-router-dom";
 import {Navbar} from "./components/navbar"
 import './App.css'
