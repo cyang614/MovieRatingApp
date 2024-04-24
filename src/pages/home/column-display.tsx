@@ -1,4 +1,4 @@
-import { Card,Form,Grid, Rating } from "semantic-ui-react";
+import { Card,Form,Grid, Label, Rating } from "semantic-ui-react";
 import { DisplayType } from "."
 import { Link,  } from "react-router-dom";
 import { useState } from "react";
@@ -15,15 +15,17 @@ interface DisplayData {
     name?: string;
     vote_average:number;
     release_date:string;
+    rating?:number;
 }
 
 interface Props{
     data:DisplayData[];
     displayType:DisplayType;
+    isRated?:boolean;
 }
 
 export const ColumnDisplay = (props:Props) =>  {
-    const {data,displayType} = props
+    const {data,displayType,isRated} = props
     const [rating,setRating] = useState<number>(0)
     
     const onSuccess =()=>{
@@ -70,6 +72,7 @@ export const ColumnDisplay = (props:Props) =>  {
                                     : displayData.name} 
                             meta={`上映日期: ${displayData.release_date} | 評分: ${displayData.vote_average}`} 
                             description={displayData.overview.slice(0,350) + "..."} />{" "}
+                        {isRated &&<Label color="green">你的評分 : {displayData.rating}</Label>}
                     </Link>
                     <Form style={{marginTop:10}}>
                         <Form.Field>
